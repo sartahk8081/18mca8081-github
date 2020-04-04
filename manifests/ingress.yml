@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "sarthak"
+    labels:
+        app: "sarthak"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: sarthak6832-sarthak.1663a943329048629faf.southindia.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "sarthak"
+                servicePort: 8080
